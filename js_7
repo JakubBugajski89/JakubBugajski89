@@ -1,0 +1,69 @@
+const min = -50;
+const max = 50;
+const number = Math.ceil(Math.random() * (max - min)) + min;
+
+console.log(`Wylosowana liczba z przedzialu <-50, 50>, to: ${number}`);
+
+if(number >= -50 && number < -25) {
+    console.log("Wylosowana liczba należy do przedziału P1");
+        x = Math.abs(number);
+        console.log(`Wartoscia bezwzgledna liczby ${number}, jest liczba ${x}`);
+
+        const min = 1;
+        const max = 5;
+        const liczba = Math.ceil(Math.random() * (max - min)) + min;
+        console.log(`Wylosowna liczba z przedzialu <1, 5>, to liczba: ${liczba}`);
+
+        if(x % liczba == 0) {
+            console.log(`TAK (${x} jest podzielna przez ${liczba}) `);
+        } 
+        else {
+            console.log("NIE");
+        }
+}
+
+if(number >= -25 && number <= 0) {
+    console.log("Wylosowana liczba należy do przedziału P2");
+    const jednosci = number % 10;
+    console.log(`Cyfra jednosci liczby ${number}, to cyfra ${jednosci}`);
+    const x = Math.floor(Math.abs(number) / 10) % 10;
+    console.log(`----> ${number}`); 
+    console.log(`----> ${x}`);
+
+    if(jednosci % 2 == 0) {
+        console.log(`TAK (liczba ${number} posiada parzysta liczbe jednosci)`);
+    } 
+    else {
+        console.log("NIE");
+    }
+}
+
+if(number > 0 && number < 25) {
+    console.log("Wylosowana liczba należy do przedziału P3");
+    const jednosci = number % 10;
+    const dziesiatek = Math.floor(number / 10) % 10;
+    console.log(`Cyfra jednosci liczby ${number}, to cyfra ${jednosci}`);
+    console.log(`Cyfra dziesiatek liczby ${number}, to cyfra ${dziesiatek}`);
+
+    if(dziesiatek > jednosci) {
+        console.log(`TAK (liczba ${number} ma wieksza cyfre dziesiatek, od cyfry jednosci)`);
+    }
+    else {
+        console.log("NIE");
+    }
+}
+
+if(number >= 25 && number <= 50) {
+    console.log("Wylosowana liczba należy do przedziału P4");
+    const jednosci = number % 10;
+    const dziesiatek = Math.floor(number / 10) % 10;
+    const suma = jednosci + dziesiatek;
+    console.log(`Suma cyfr jednosci i dziesiatek liczby ${number}, to liczba: ${suma}`);
+
+    if(suma % 2 == 0) {
+        console.log(`TAK (suma cyfr jednosci i dzisiatek liczby ${number} jest liczba parzysta)`);
+    }
+    else {
+        console.log("NIE");
+    }
+}
