@@ -1,0 +1,47 @@
+function number(min, max) {
+    const wynik = Math.ceil(Math.random() * (max - min)) + min;
+    return wynik;
+}
+
+const x = number(2.5, 6.5);
+const y = number(2.5, 6.5);
+
+console.log(`${x}`);
+console.log(`${y}`);
+
+const pole_1 = (Math.pow(x, 2) * Math.sqrt(3)) / 4;
+const obwod_1 = x * 3;
+console.log(pole_1);
+console.log(obwod_1);
+
+const pole_2 = (Math.pow(y, 2) * Math.sqrt(3)) / 4;
+const obwod_2 = y * 3;
+console.log(pole_2);
+console.log(obwod_2);
+
+if(pole_1 > pole_2) {
+    const stosunek_pol = pole_1 / pole_2;
+    console.log(`${stosunek_pol}`);
+}
+else {
+    const stosunek_pol_1 = pole_2 / pole_1;
+    console.log(`${stosunek_pol_1}`);
+}
+
+if(obwod_1 > obwod_2) {
+    const stosunek_obw = obwod_1 / obwod_2;
+    console.log(`${stosunek_obw}`);
+}
+else {
+    const stosunek_obw_1 = obwod_2 / obwod_1;
+    console.log(`${stosunek_obw_1}`);
+}
+
+const roznica_pol = pole_1 - pole_2;
+const wartosc = Math.abs(roznica_pol);
+console.log(`${wartosc}`);
+
+const promien = wartosc / 3.14;
+const r = Math.pow(promien, 2);
+console.log(promien);
+
