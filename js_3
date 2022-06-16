@@ -1,0 +1,17 @@
+let weight = 40;
+let height = 1.80;
+
+let bmi = 0;
+bmi = Math.round(weight / Math.pow(height, 2));
+
+console.log(bmi);
+
+if (bmi <= 18.49) {
+    console.log("Niedowaga");
+}
+else if (bmi > 18.49 && bmi <= 24.99) {
+    console.log("Waga prawidłowa");
+}
+else {
+    console.log("Nadwaga");
+}
